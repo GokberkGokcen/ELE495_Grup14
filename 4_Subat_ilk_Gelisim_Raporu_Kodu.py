@@ -252,51 +252,52 @@ while True:
                     if sayim == 23:
                         songonderilen = "Kanal +"
                         print("Kanal +")
-                        #Buraya ileriki zamanlarda sinyal gönderme komutu da yazılacak.
+                        rtn = subprocess.call(["irsend", "SEND_ONCE", "tv_ELE495", "KANAL_ILERI"])
+                        #LIRC kütüphanesinden, bu komut ile tv_ELE495 dosyası içindeki KANAL_ILERI sinyali verici devre tarafından TV'ye gönederilir.
                     if sayim == 24:
                         songonderilen = "Kanal -"
                         print("Kanal -")
-                        #Buraya ileriki zamanlarda sinyal gönderme komutu da yazılacak.
+                        rtn = subprocess.call(["irsend", "SEND_ONCE", "tv_ELE495", "KANAL_GERI"])
                     if sayim == 25:
                         songonderilen = "Ses +"
                         print("Ses +")
-                        #Buraya ileriki zamanlarda sinyal gönderme komutu da yazılacak.
+                        rtn = subprocess.call(["irsend", "SEND_ONCE", "tv_ELE495", "SES_ARTTIR"])
                     if sayim == 32:
                         songonderilen = "Ses -"
                         print("Ses -")
-                        #Buraya ileriki zamanlarda sinyal gönderme komutu da yazılacak.
+                        rtn = subprocess.call(["irsend", "SEND_ONCE", "tv_ELE495", "SES_AZALT"])
                     if sayim == 34:
                         songonderilen = "RETURN"
                         print("RETURN(back) ")
-                        #Buraya ileriki zamanlarda sinyal gönderme komutu da yazılacak.
+                        rtn = subprocess.call(["irsend", "SEND_ONCE", "tv_ELE495", "RETURN"])
                     if sayim == 35:
                         songonderilen = "Home"
                         print("Home")
-                        #Buraya ileriki zamanlarda sinyal gönderme komutu da yazılacak.
+                        rtn = subprocess.call(["irsend", "SEND_ONCE", "tv_ELE495", "HOME"])
                     if sayim == 42:
                         songonderilen = "SOURCE"
                         print("Ayarlar Menüsü(SOURCE) ")
-                        #Buraya ileriki zamanlarda sinyal gönderme komutu da yazılacak.
+                        rtn = subprocess.call(["irsend", "SEND_ONCE", "tv_ELE495", "SOURCE"])
                     if sayim == 43:
                         songonderilen = "Netflix"
                         print("Netflix")
-                        #Buraya ileriki zamanlarda sinyal gönderme komutu da yazılacak.
+                        rtn = subprocess.call(["irsend", "SEND_ONCE", "tv_ELE495", "NETFLIX"])
                     if sayim == 45:
                         songonderilen = "Amazon prime"
                         print("Amazon prime")
-                        #Buraya ileriki zamanlarda sinyal gönderme komutu da yazılacak.
+                        rtn = subprocess.call(["irsend", "SEND_ONCE", "tv_ELE495", "AMAZON_PRIME"])
                     if sayim == 52:
                         songonderilen = "Mute"
                         print("Mute")
-                        #Buraya ileriki zamanlarda sinyal gönderme komutu da yazılacak.
+                        rtn = subprocess.call(["irsend", "SEND_ONCE", "tv_ELE495", "MUTE"])
                     if sayim == 53:
                         songonderilen = "Exit"
                         print("Exit")
-                        #Buraya ileriki zamanlarda sinyal gönderme komutu da yazılacak.
+                        rtn = subprocess.call(["irsend", "SEND_ONCE", "tv_ELE495", "EXIT"])
                     if sayim == 54:
                         songonderilen = "TV ON/OFF"
                         print("TV ON/OFF")
-                        #Buraya ileriki zamanlarda sinyal gönderme komutu da yazılacak.
+                        rtn = subprocess.call(["irsend", "SEND_ONCE", "tv_ELE495", "TV_ON_OFF"])
 
                     print("songonderilen=" + songonderilen)
                     time.sleep(1)  # Burada sinyali gönderme işlemi için zaman kazanılır. Bunu kaldırınca hata verdi.
